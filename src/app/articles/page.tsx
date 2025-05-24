@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Articles() {
   return (
     <div>
       <p className="mt-100 font-bold">
