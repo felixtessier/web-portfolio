@@ -27,11 +27,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 shadow-md transition-all duration-300 ${
-        scrolled ? "pt-0" : "pt-8"
-      }`}
-    >
+    <header className="mt-8">
       <nav className="container mx-auto h-24 flex items-center justify-between border-b-2 border-white">
         <div className="flex items-center gap-4">
           <Image
@@ -45,7 +41,7 @@ const Header = () => {
             height={28}
             className="transition-opacity duration-300"
           />
-          <h1 className={`text-xl font-mclaren`}>Felix Tessier</h1>
+          <p className={`text-xl font-mclaren`}>Felix Tessier</p>
         </div>
         <nav>
           <ul className="flex gap-24 font-bold text-xl">
