@@ -1,7 +1,7 @@
-import ArticleCard from "@/components/ArticleCard";
-import { CardData } from "@/data/ArticlesCardData";
-import Image from "next/image";
-import Link from "next/link";
+import ArticleCard from '@/components/ArticleCard';
+import { CardData } from '@/data/ArticlesCardData';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -29,20 +29,19 @@ export default function Home() {
           className="rounded-full transition-opacity duration-300 mr-8"
         />
         <div className="ml-8">
-          <h3>
-            Felix Tessier
-          </h3>
+          <h3>Felix Tessier</h3>
           <p className="font-bold text-2xl my-2">
             Full Stack Software Developer
           </p>
           <p className="text-xl my-2">
-            I'm currently working as a Software Developer at Price Industries Ltd.
+            I'm currently working as a Software Developer at Price Industries
+            Ltd.
           </p>
           <div className="my-2">
-            <Link 
+            <Link
               href="https://www.linkedin.com/in/felix-tessier-48486824b/"
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
             >
               <Image
                 src="/linkedin_line.svg"
@@ -52,10 +51,10 @@ export default function Home() {
                 className="inline-block mr-4 hover:opacity-70 transition-opacity duration-300"
               />
             </Link>
-            <Link 
+            <Link
               href="https://github.com/felixtessier"
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
             >
               <Image
                 src="/github_line.svg"
@@ -76,11 +75,11 @@ export default function Home() {
           <Link
             href="/CV_Felix_Tessier.pdf"
             target="_blank"
-            rel="noopener noreferrer" 
+            rel="noopener noreferrer"
             className="inline-block bg-[#E06C00] hover:bg-[#D05B00] px-8 py-4 rounded-2xl text-2xl 
               font-semibold text-white text-center my-2 
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D05B00]"
-            role="button"  
+            role="button"
           >
             Resume
           </Link>

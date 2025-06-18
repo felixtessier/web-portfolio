@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -17,17 +17,17 @@ const ThemeSwitcher = () => {
   }
 
   const handleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
+    if (theme === 'light') {
+      setTheme('dark');
     } else {
-      setTheme("light");
+      setTheme('light');
     }
   };
 
   return (
     <button onClick={handleTheme}>
       <Image
-        src={theme === "dark" ? "/sun-line.svg" : "/moon-stars-line.svg"}
+        src={theme === 'dark' ? '/sun-line.svg' : '/moon-stars-line.svg'}
         alt="Theme toggle"
         width={32}
         height={32}

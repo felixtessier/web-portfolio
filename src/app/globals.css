@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=McLaren&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -8,11 +8,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-mclaren: "McLaren", cursive;
+  --font-mclaren: 'McLaren', cursive;
   --h-color: #161345;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --background: #191d21;
   --foreground: #ffffff;
   --primary: #6d8aff;
@@ -25,7 +25,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-mclaren: "McLaren", cursive;
+  --font-mclaren: 'McLaren', cursive;
 }
 
 body {

@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-import Link from "next/link";
-import ThemeSwitcher from "./ThemeSwitcher";
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const Header = () => {
   const pathname = usePathname();
@@ -22,20 +22,22 @@ const Header = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header className="mt-8">
-      <nav className={`container mx-auto h-24 flex items-center justify-between border-b-2 
-        ${theme === 'light' ? 'border-black' : 'border-white'}`}>
+      <nav
+        className={`container mx-auto h-24 flex items-center justify-between border-b-2 
+        ${theme === 'light' ? 'border-black' : 'border-white'}`}
+      >
         <div className="flex items-center gap-4">
           <Image
             src={
-              theme === "dark"
-                ? "/terminal_box_line_light.svg"
-                : "/terminal_box_line_dark.svg"
+              theme === 'dark'
+                ? '/terminal_box_line_light.svg'
+                : '/terminal_box_line_dark.svg'
             }
             alt="Logo"
             width={28}
@@ -50,7 +52,7 @@ const Header = () => {
               <Link
                 href="/"
                 className={`px-6 py-2 rounded-lg ${
-                  pathname === "/" ? "bg-[#506ED8] text-white" : ""
+                  pathname === '/' ? 'bg-[#506ED8] text-white' : ''
                 }`}
               >
                 Home
@@ -60,7 +62,7 @@ const Header = () => {
               <Link
                 href="/articles"
                 className={`px-6 py-2 rounded-lg ${
-                  pathname === "/articles" ? "bg-[#506ED8] text-white" : ""
+                  pathname === '/articles' ? 'bg-[#506ED8] text-white' : ''
                 }`}
               >
                 Articles
@@ -70,7 +72,7 @@ const Header = () => {
               <Link
                 href="/projects"
                 className={`px-6 py-2 rounded-lg ${
-                  pathname === "/projects" ? "bg-[#506ED8] text-white" : ""
+                  pathname === '/projects' ? 'bg-[#506ED8] text-white' : ''
                 }`}
               >
                 Projects

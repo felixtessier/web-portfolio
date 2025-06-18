@@ -1,6 +1,6 @@
 // components/PostCard.tsx
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 type Props = {
   title: string;
@@ -26,7 +26,7 @@ export default function PostCard({
     >
       {coverSrc ? (
         <div className="relative h-64 w-full rounded-lg overflow-hidden">
-          <Image src={coverSrc} alt="" fill style={{ objectFit: "cover" }} />
+          <Image src={coverSrc} alt="" fill style={{ objectFit: 'cover' }} />
         </div>
       ) : (
         <div className="h-64 w-full bg-gray-200 rounded-lg overflow-hidden" />
