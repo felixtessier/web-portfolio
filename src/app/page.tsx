@@ -34,8 +34,8 @@ export default function Home() {
             Full Stack Software Developer
           </p>
           <p className="text-xl my-2">
-            I'm currently working as a Software Developer at Price Industries
-            Ltd.
+            I&#39;m currently working as a Software Developer at Price
+            Industries Ltd.
           </p>
           <div className="my-2">
             <Link

@@ -9,7 +9,7 @@ import ThemeSwitcher from './ThemeSwitcher';
 
 const Header = () => {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
+  const [, setScrolled] = useState(false);
   const { theme } = useTheme();
 
   useEffect(() => {
