@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header className="mt-8">
       <nav
-        className={`container mx-auto h-24 flex items-center justify-between border-b-2 
+        className={`h-24 flex items-center justify-between border-b-2 
         ${theme === 'light' ? 'border-black' : 'border-white'}`}
       >
         <div className="flex items-center gap-4">
@@ -46,7 +46,7 @@ const Header = () => {
           />
           <p className={`text-xl font-mclaren`}>Felix Tessier</p>
         </div>
-        <nav>
+        <nav className=" hidden lg:block">
           <ul className="flex gap-24 font-bold text-xl">
             <li>
               <Link
