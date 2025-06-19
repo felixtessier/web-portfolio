@@ -24,7 +24,8 @@ export default function PostCard({
   return (
     <Link
       href={href}
-      className="block rounded-lg overflow-hidden shadow hover:shadow-lg transition"
+      className="block rounded-lg overflow-hidden shadow transition 
+      hover:shadow-lg hover:scale-[1.03] hover:ring-2 hover:ring-orange-400 hover:border-orange-400 border border-transparent duration-200"
     >
       {coverSrc ? (
         <div className="relative h-64 w-full rounded-lg overflow-hidden">
@@ -33,10 +34,8 @@ export default function PostCard({
       ) : (
         <div className="h-64 w-full bg-gray-200 rounded-lg overflow-hidden" />
       )}
-
       <div className="p-4">
         <h3 className="mb-3">{title}</h3>
-
         <div className="flex items-center">
           <Image
             src={authorAvatar}
