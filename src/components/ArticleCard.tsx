@@ -25,7 +25,7 @@ export default function PostCard({
     <Link
       href={href}
       className="block rounded-lg overflow-hidden shadow transition 
-      hover:shadow-lg hover:scale-[1.03] hover:ring-2 hover:ring-orange-400 hover:border-orange-400 border border-transparent duration-200"
+      hover:shadow-lg hover:scale-[1.03] hover:ring-2 hover:ring-[var(--h-color)] hover:border-[var(--h-color)] border border-transparent duration-200"
     >
       {coverSrc ? (
         <div className="relative h-64 w-full rounded-lg overflow-hidden">

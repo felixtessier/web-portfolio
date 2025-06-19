@@ -96,9 +96,7 @@ export default function Home() {
             href="/CV_Felix_Tessier.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#E06C00] hover:bg-[#D05B00] px-8 py-4 rounded-2xl text-2xl 
-              font-semibold text-white text-center my-2 
-              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D05B00]"
+            className="inline-block bg-[var(--h-color)] brightness-85 hover:brightness-100 px-8 py-4 rounded-2xl text-2xl font-semibold text-white text-center my-2 transition"
             role="button"
           >
             Resume
@@ -144,7 +142,7 @@ export default function Home() {
       <div className="flex flex-col xl:flex-row justify-between items-center my-8 mx-12 xl:mx-24">
         <div className="mb-12 xl:mb-0">
           <div>
-            <h1>Thanks for stopping by!</h1>
+            <h1 className="!mt-0 mb-4">Thanks for stopping by!</h1>
             <p className="text-2xl font-bold">
               Have yourself a good and relaxing day.
             </p>
@@ -162,7 +160,7 @@ export default function Home() {
                 placeholder="Enter your email"
                 className="bg-gray-200 text-gray-900 border-0 flex-1 h-12 rounded-lg px-4"
               />
-              <button className="bg-orange-500 font-bold hover:bg-orange-600 text-white px-6 rounded-lg">
+              <button className="bg-[var(--h-color)] font-bold brightness-85 hover:brightness-100 text-white px-6 rounded-lg transition cursor-pointer">
                 Subscribe
               </button>
             </div>

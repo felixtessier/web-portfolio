@@ -51,9 +51,10 @@ const Header = () => {
             <li>
               <Link
                 href="/"
-                className={`px-6 py-2 rounded-lg ${
-                  pathname === '/' ? 'bg-[#506ED8] text-white' : ''
-                }`}
+                className={`px-6 py-2 rounded-lg transition duration-200 ease-in-out
+                  hover:bg-[#506ED8] hover:text-white hover:scale-105
+                  ${pathname === '/' ? 'bg-[#506ED8] text-white' : ''}
+                `}
               >
                 Home
               </Link>
@@ -61,9 +62,10 @@ const Header = () => {
             <li>
               <Link
                 href="/articles"
-                className={`px-6 py-2 rounded-lg ${
-                  pathname === '/articles' ? 'bg-[#506ED8] text-white' : ''
-                }`}
+                className={`px-6 py-2 rounded-lg transition duration-200 ease-in-out
+                  hover:bg-[#506ED8] hover:text-white hover:scale-105
+                  ${pathname === '/articles' ? 'bg-[#506ED8] text-white' : ''}
+                `}
               >
                 Articles
               </Link>
@@ -71,9 +73,10 @@ const Header = () => {
             <li>
               <Link
                 href="/projects"
-                className={`px-6 py-2 rounded-lg ${
-                  pathname === '/projects' ? 'bg-[#506ED8] text-white' : ''
-                }`}
+                className={`px-6 py-2 rounded-lg transition duration-200 ease-in-out
+                  hover:bg-[#506ED8] hover:text-white hover:scale-105
+                  ${pathname === '/projects' ? 'bg-[#506ED8] text-white' : ''}
+                `}
               >
                 Projects
               </Link>
