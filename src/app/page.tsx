@@ -14,7 +14,7 @@ export default function Home() {
       <div
         className={`border-b ${theme === 'light' ? 'border-black' : 'border-white'}`}
       >
-        <div className="mx-12 xl:mx-24 my-12">
+        <div className="mx-12 xl:mx-24 my-8">
           <h1>Featured Articles</h1>
           <div
             className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-8}`}
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1  md:grid-cols-2 place-items-center my-12 mx-12 xl:mx-24 ">
+      <div className="grid grid-cols-1  md:grid-cols-2 place-items-center my-8 mx-12 xl:mx-24 ">
         <Image
           src="/felix-profile.jpg"
           alt="Logo"
@@ -101,7 +101,7 @@ export default function Home() {
       <div
         className={`border-y-2 ${theme === 'light' ? 'border-black' : 'border-white'}`}
       >
-        <div className="my-12 mx-12 xl:mx-24">
+        <div className="my-8 mx-12 xl:mx-24">
           <h1>About</h1>
           <p className="my-2">
             I started off my professional career as a Project Engineer in the
@@ -134,7 +134,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row justify-between items-center my-12 mx-12 xl:mx-24">
+      <div className="flex flex-col xl:flex-row justify-between items-center my-8 mx-12 xl:mx-24">
         <div className="mb-12 xl:mb-0">
           <div>
             <h1>Thanks for stopping by!</h1>
