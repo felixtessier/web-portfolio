@@ -1,6 +1,7 @@
-// components/PostCard.tsx
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 type Props = {
   title: string;
@@ -19,6 +20,7 @@ export default function PostCard({
   authorAvatar,
   readTime,
 }: Props) {
+  const { theme } = useTheme();
   return (
     <Link
       href={href}
@@ -41,7 +43,7 @@ export default function PostCard({
             alt={authorName}
             width={60}
             height={60}
-            className="rounded-full object-cover mr-4"
+            className={`rounded-full object-cover mr-4 border ${theme === 'light' ? 'border-black' : 'border-white'}`}
           />
           <div className="flex flex-col">
             <span className="text-xl font-bold">{authorName}</span>
