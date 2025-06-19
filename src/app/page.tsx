@@ -5,6 +5,7 @@ import { CardData } from '@/data/ArticlesCardData';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const { theme } = useTheme();
@@ -17,18 +18,24 @@ export default function Home() {
         <div className="mx-12 xl:mx-24 my-8">
           <h1>Featured Articles</h1>
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-8}`}
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-8`}
           >
             {CardData.map((article, index) => (
-              <ArticleCard
+              <motion.div
                 key={index}
-                title={article.title}
-                href={article.href}
-                coverSrc={article.coverSrc}
-                authorName={article.authorName}
-                authorAvatar={article.authorAvatar}
-                readTime={article.readTime}
-              />
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.15, duration: 0.6 }}
+              >
+                <ArticleCard
+                  title={article.title}
+                  href={article.href}
+                  coverSrc={article.coverSrc}
+                  authorName={article.authorName}
+                  authorAvatar={article.authorAvatar}
+                  readTime={article.readTime}
+                />
+              </motion.div>
             ))}
           </div>
         </div>

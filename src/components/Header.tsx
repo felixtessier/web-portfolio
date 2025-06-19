@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="mt-8">
+    <header className="sticky top-0 z-50 bg-[var(--background)] mt-8">
       <nav
         className={`h-24 flex items-center justify-between border-b-2 
         ${theme === 'light' ? 'border-black' : 'border-white'}`}
