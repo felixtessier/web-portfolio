@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
 @import 'tailwindcss';
 
@@ -6,7 +7,7 @@
   --foreground: #191d21;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Inter', sans-serif;
   --font-mono: var(--font-geist-mono);
   --font-mclaren: 'McLaren', cursive;
   --h-color: #161345;
@@ -31,7 +32,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 
 h1 {
