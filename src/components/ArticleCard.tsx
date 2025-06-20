@@ -24,7 +24,7 @@ export default function ArticleCard({
   return (
     <Link
       key={slug}
-      href={`/articles/${slug}`}
+      href={`/blog/${slug}`}
       className="block rounded-lg overflow-hidden shadow transition 
       hover:shadow-lg hover:scale-[1.03] hover:ring-2 hover:ring-[var(--h-color)] hover:border-[var(--h-color)] border border-transparent duration-200"
     >

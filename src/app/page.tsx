@@ -16,11 +16,11 @@ export default function Home() {
         className={`border-b ${theme === 'light' ? 'border-black' : 'border-white'}`}
       >
         <div className="mx-12 xl:mx-24 my-8">
-          <h1>Featured Articles</h1>
+          <h1>Featured Blog Posts</h1>
           <div
             className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-8`}
           >
-            {CardData.map((article, index) => (
+            {CardData.slice(0, 6).map((article, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}

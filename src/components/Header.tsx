@@ -61,13 +61,13 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/articles"
+                href="/blog"
                 className={`px-6 py-2 rounded-lg transition duration-200 ease-in-out
                   hover:bg-[#506ED8] hover:text-white hover:scale-105
                   ${pathname === '/articles' ? 'bg-[#506ED8] text-white' : ''}
                 `}
               >
-                Articles
+                Blog
               </Link>
             </li>
             <li>
