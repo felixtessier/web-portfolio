@@ -5,16 +5,16 @@ import { useTheme } from 'next-themes';
 
 type Props = {
   title: string;
-  href: string;
+  slug: string;
   coverSrc?: string;
   authorName: string;
   authorAvatar: string;
   readTime: string;
 };
 
-export default function PostCard({
+export default function ArticleCard({
   title,
-  href,
+  slug,
   coverSrc,
   authorName,
   authorAvatar,
@@ -23,7 +23,8 @@ export default function PostCard({
   const { theme } = useTheme();
   return (
     <Link
-      href={href}
+      key={slug}
+      href={`/articles/${slug}`}
       className="block rounded-lg overflow-hidden shadow transition 
       hover:shadow-lg hover:scale-[1.03] hover:ring-2 hover:ring-[var(--h-color)] hover:border-[var(--h-color)] border border-transparent duration-200"
     >

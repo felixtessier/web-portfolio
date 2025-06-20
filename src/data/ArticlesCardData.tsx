@@ -1,7 +1,16 @@
-export const CardData = [
+export interface CardDataType {
+  title: string;
+  slug: string;
+  coverSrc: string;
+  authorName: string;
+  authorAvatar: string;
+  readTime: string;
+}
+
+export const CardData: CardDataType[] = [
   {
     title: 'Why I became a software developer',
-    href: '/posts/why-i-became-a-software-developer',
+    slug: 'why-i-became-a-software-developer',
     coverSrc: '/software-dev.jpeg',
     authorName: 'Felix',
     authorAvatar: '/felix-profile.jpg',
@@ -9,7 +18,7 @@ export const CardData = [
   },
   {
     title: 'Understanding React Hooks',
-    href: '/posts/understanding-react-hooks',
+    slug: 'understanding-react-hooks',
     coverSrc: '/software-dev.jpeg',
     authorName: 'Felix',
     authorAvatar: '/felix-profile.jpg',
@@ -17,7 +26,7 @@ export const CardData = [
   },
   {
     title: 'CSS Grid vs Flexbox',
-    href: '/posts/css-grid-vs-flexbox',
+    slug: 'css-grid-vs-flexbox',
     coverSrc: '/software-dev.jpeg',
     authorName: 'Felix',
     authorAvatar: '/felix-profile.jpg',
@@ -25,7 +34,7 @@ export const CardData = [
   },
   {
     title: 'The Future of JavaScript',
-    href: '/posts/future-of-javascript',
+    slug: 'future-of-javascript',
     coverSrc: '/software-dev.jpeg',
     authorName: 'Felix',
     authorAvatar: '/felix-profile.jpg',

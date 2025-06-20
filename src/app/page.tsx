@@ -29,7 +29,7 @@ export default function Home() {
               >
                 <ArticleCard
                   title={article.title}
-                  href={article.href}
+                  slug={article.slug}
                   coverSrc={article.coverSrc}
                   authorName={article.authorName}
                   authorAvatar={article.authorAvatar}
