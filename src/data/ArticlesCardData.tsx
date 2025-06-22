@@ -9,8 +9,8 @@ export interface CardDataType {
 
 export const CardData: CardDataType[] = [
   {
-    title: 'Why I became a software developer',
-    slug: 'why-i-became-a-software-developer',
+    title: 'From highschool to software developer',
+    slug: 'from-highschool-to-software-developer',
     coverSrc: '/software-dev.jpeg',
     authorName: 'Felix',
     authorAvatar: '/felix-profile.jpg',
