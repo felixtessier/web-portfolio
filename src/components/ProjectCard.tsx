@@ -34,7 +34,7 @@ export default function ProjectCard({
         <div className="flex flex-row justify-between items-center">
           <h4>{title}</h4>
           <Image
-            src={`${theme === 'light' ? '/arrow_right_up_dark.svg' : '/arrow_right_up.svg'}`}
+            src={`${theme === 'light' ? '/icons/arrow_right_up_dark.svg' : '/icons/arrow_right_up.svg'}`}
             alt="Arrow Icon"
             width={24}
             height={24}

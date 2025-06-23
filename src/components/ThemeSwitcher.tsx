@@ -30,7 +30,11 @@ const ThemeSwitcher = () => {
       className="transition duration-200 ease-in-out hover:scale-110 hover:bg-orange-400 dark:hover:bg-orange-400 rounded-full cursor-pointer p-1"
     >
       <Image
-        src={theme === 'dark' ? '/sun-line.svg' : '/moon-stars-line.svg'}
+        src={
+          theme === 'dark'
+            ? '/icons/sun-line.svg'
+            : '/icons/moon-stars-line.svg'
+        }
         alt="Theme toggle"
         width={32}
         height={32}

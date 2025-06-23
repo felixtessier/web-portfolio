@@ -36,8 +36,8 @@ const Header = () => {
           <Image
             src={
               theme === 'dark'
-                ? '/terminal_box_line_light.svg'
-                : '/terminal_box_line_dark.svg'
+                ? '/icons/terminal_box_line_light.svg'
+                : '/icons/terminal_box_line_dark.svg'
             }
             alt="Logo"
             width={28}

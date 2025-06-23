@@ -42,7 +42,7 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1  md:grid-cols-2 place-items-center my-8 mx-12 xl:mx-24 ">
         <Image
-          src="/felix-profile.jpg"
+          src="/images/felix-profile.jpg"
           alt="Logo"
           width={300}
           height={300}
@@ -64,7 +64,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Image
-                src={`${theme === 'light' ? '/linkedin_fill.svg' : 'linkedin_line.svg'}`}
+                src={`${theme === 'light' ? '/icons/linkedin_fill.svg' : '/icons/linkedin_line.svg'}`}
                 alt="LinkedIn"
                 width={36}
                 height={36}
@@ -77,7 +77,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Image
-                src={`${theme === 'light' ? '/github_fill.svg' : 'github_line.svg'}`}
+                src={`${theme === 'light' ? '/icons/github_fill.svg' : '/icons/github_line.svg'}`}
                 alt="Github"
                 width={36}
                 height={36}
@@ -85,7 +85,7 @@ export default function Home() {
               />
             </Link>
             <Image
-              src={`${theme === 'light' ? '/mail_line_dark.svg' : 'mail_line.svg'}`}
+              src={`${theme === 'light' ? '/icons/mail_line_dark.svg' : '/icons/mail_line.svg'}`}
               alt="mail"
               width={36}
               height={36}
@@ -93,7 +93,7 @@ export default function Home() {
             />
           </div>
           <Link
-            href="/CV_Felix_Tessier.pdf"
+            href="/documents/CV_Felix_Tessier.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[var(--h-color)] brightness-85 hover:brightness-100 px-8 py-4 rounded-2xl text-2xl font-semibold text-white text-center my-2 transition"
@@ -168,7 +168,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center">
           <Image
-            src="/software-dev-edited.svg"
+            src="/images/software-dev-edited.svg"
             alt="Developer working at computer"
             width={400}
             height={300}
