@@ -13,8 +13,14 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+  const isEmailFeatureEnabled = false;
 
   async function handleSubscribe() {
+    if (!isEmailFeatureEnabled) {
+      setMessage('Email notifications are coming soon! Check back later.');
+      return;
+    }
+
     setLoading(true);
     setMessage(null);
     try {
