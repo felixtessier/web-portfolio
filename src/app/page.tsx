@@ -6,9 +6,35 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Home() {
   const { theme } = useTheme();
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<string | null>(null);
+
+  async function handleSubscribe() {
+    setLoading(true);
+    setMessage(null);
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setMessage('Subscribed successfully!');
+        setEmail('');
+      } else {
+        setMessage(data.error || 'Subscription failed.');
+      }
+    } catch (e) {
+      setMessage('Something went wrong.');
+    }
+    setLoading(false);
+  }
 
   return (
     <div className="flex flex-col">
@@ -159,11 +185,19 @@ export default function Home() {
                 type="email"
                 placeholder="Enter your email"
                 className="bg-gray-200 text-gray-900 border-0 flex-1 h-12 rounded-lg px-4"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
               />
-              <button className="bg-[var(--h-color)] font-bold brightness-85 hover:brightness-100 text-white px-6 rounded-lg transition cursor-pointer">
-                Subscribe
+              <button
+                className="bg-[var(--h-color)] font-bold brightness-85 hover:brightness-100 text-white px-6 rounded-lg transition cursor-pointer"
+                onClick={handleSubscribe}
+                disabled={loading || !email}
+              >
+                {loading ? 'Subscribing...' : 'Subscribe'}
               </button>
             </div>
+            {message && <p className="text-sm mt-2">{message}</p>}
           </div>
         </div>
         <div className="flex flex-col items-center">
