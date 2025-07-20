@@ -10,7 +10,9 @@ import ThemeSwitcher from './ThemeSwitcher';
 const Header = () => {
   const pathname = usePathname();
   const [, setScrolled] = useState(false);
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
+
+  const resolvedTheme = theme === 'system' ? systemTheme : theme;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,12 +32,12 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-[var(--background)] mt-8">
       <nav
         className={`h-24 flex items-center justify-between border-b-2 
-        ${theme === 'light' ? 'border-black' : 'border-white'}`}
+        ${resolvedTheme === 'light' ? 'border-black' : 'border-white'}`}
       >
         <div className="flex items-center gap-4">
           <Image
             src={
-              theme === 'dark'
+              resolvedTheme === 'dark'
                 ? '/icons/terminal_box_line_light.svg'
                 : '/icons/terminal_box_line_dark.svg'
             }

@@ -20,7 +20,10 @@ export default function ArticleCard({
   authorAvatar,
   readTime,
 }: Props) {
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
+
+  const resolvedTheme = theme === 'system' ? systemTheme : theme;
+
   return (
     <Link
       key={slug}
@@ -43,7 +46,7 @@ export default function ArticleCard({
             alt={authorName}
             width={60}
             height={60}
-            className={`rounded-full object-cover mr-4 border ${theme === 'light' ? 'border-black' : 'border-white'}`}
+            className={`rounded-full object-cover mr-4 border ${resolvedTheme === 'light' ? 'border-black' : 'border-white'}`}
           />
           <div className="flex flex-col">
             <span className="text-xl font-bold">{authorName}</span>

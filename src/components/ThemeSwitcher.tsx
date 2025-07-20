@@ -5,8 +5,10 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, systemTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
+  const resolvedTheme = theme === 'system' ? systemTheme : theme;
 
   useEffect(() => {
     setMounted(true);
@@ -17,7 +19,7 @@ const ThemeSwitcher = () => {
   }
 
   const handleTheme = () => {
-    if (theme === 'light') {
+    if (resolvedTheme === 'light') {
       setTheme('dark');
     } else {
       setTheme('light');
@@ -31,7 +33,7 @@ const ThemeSwitcher = () => {
     >
       <Image
         src={
-          theme === 'dark'
+          resolvedTheme === 'dark'
             ? '/icons/sun-line.svg'
             : '/icons/moon-stars-line.svg'
         }

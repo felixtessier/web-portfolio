@@ -9,11 +9,13 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function Home() {
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const isEmailFeatureEnabled = false;
+
+  const resolvedTheme = theme === 'system' ? systemTheme : theme;
 
   async function handleSubscribe() {
     if (!isEmailFeatureEnabled) {
@@ -46,7 +48,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <div
-        className={`border-b ${theme === 'light' ? 'border-black' : 'border-white'}`}
+        className={`border-b ${resolvedTheme === 'light' ? 'border-black' : 'border-white'}`}
       >
         <div className="mx-12 xl:mx-24 my-8">
           <h1>Featured Blog Posts</h1>
@@ -79,7 +81,7 @@ export default function Home() {
           alt="Logo"
           width={300}
           height={300}
-          className={`rounded-full transition-opacity duration-300 mr-8 border-2 ${theme === 'light' ? 'border-black' : 'border-white'}`}
+          className={`rounded-full transition-opacity duration-300 mr-8 border-2 ${resolvedTheme === 'light' ? 'border-black' : 'border-white'}`}
         />
         <div className="ml-8">
           <h3>Felix Tessier</h3>
@@ -97,7 +99,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Image
-                src={`${theme === 'light' ? '/icons/linkedin_fill.svg' : '/icons/linkedin_line.svg'}`}
+                src={`${resolvedTheme === 'light' ? '/icons/linkedin_fill.svg' : '/icons/linkedin_line.svg'}`}
                 alt="LinkedIn"
                 width={36}
                 height={36}
@@ -110,7 +112,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Image
-                src={`${theme === 'light' ? '/icons/github_fill.svg' : '/icons/github_line.svg'}`}
+                src={`${resolvedTheme === 'light' ? '/icons/github_fill.svg' : '/icons/github_line.svg'}`}
                 alt="Github"
                 width={36}
                 height={36}
@@ -118,7 +120,7 @@ export default function Home() {
               />
             </Link>
             <Image
-              src={`${theme === 'light' ? '/icons/mail_line_dark.svg' : '/icons/mail_line.svg'}`}
+              src={`${resolvedTheme === 'light' ? '/icons/mail_line_dark.svg' : '/icons/mail_line.svg'}`}
               alt="mail"
               width={36}
               height={36}
@@ -137,7 +139,7 @@ export default function Home() {
         </div>
       </div>
       <div
-        className={`border-y-2 ${theme === 'light' ? 'border-black' : 'border-white'}`}
+        className={`border-y-2 ${resolvedTheme === 'light' ? 'border-black' : 'border-white'}`}
       >
         <div className="my-8 mx-12 xl:mx-24">
           <h1>About</h1>

@@ -16,7 +16,9 @@ export default function ProjectCard({
   coverSrc,
   description,
 }: Props) {
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
+  const resolvedTheme = theme === 'system' ? systemTheme : theme;
+
   return (
     <Link
       href={href}
@@ -34,7 +36,7 @@ export default function ProjectCard({
         <div className="flex flex-row justify-between items-center">
           <h4>{title}</h4>
           <Image
-            src={`${theme === 'light' ? '/icons/arrow_right_up_dark.svg' : '/icons/arrow_right_up.svg'}`}
+            src={`${resolvedTheme === 'light' ? '/icons/arrow_right_up_dark.svg' : '/icons/arrow_right_up.svg'}`}
             alt="Arrow Icon"
             width={24}
             height={24}
