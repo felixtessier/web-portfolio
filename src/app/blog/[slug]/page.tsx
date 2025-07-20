@@ -30,10 +30,7 @@ export default async function Post({
 }
 
 export function generateStaticParams() {
-  return [
-    { slug: 'from-highschool-to-software-developer' },
-    { slug: 'understanding-react-hooks' },
-  ];
+  return [{ slug: 'from-highschool-to-software-developer' }];
 }
 
 export const dynamicParams = false;
