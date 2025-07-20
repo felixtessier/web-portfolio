@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import MailerLite from '@mailerlite/mailerlite-nodejs';
-import { AxiosResponse } from 'axios';
 
 // Add type for the expected request body
 type SubscribeRequest = {

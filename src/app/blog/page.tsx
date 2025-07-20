@@ -2,12 +2,9 @@
 
 import ArticleCard from '@/components/ArticleCard';
 import { CardData } from '@/data/ArticlesCardData';
-import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 
 export default function Posts() {
-  const { theme } = useTheme();
-
   return (
     <div className="mx-12 xl:mx-24 my-8">
       <h1>All Posts</h1>

@@ -37,6 +37,7 @@ export default function Home() {
         setMessage(data.error || 'Subscription failed.');
       }
     } catch (e) {
+      console.error('Newsletter subscription error:', e);
       setMessage('Something went wrong.');
     }
     setLoading(false);
@@ -165,8 +166,8 @@ export default function Home() {
             I now work as an Software Developer for Price Industries Ltd. Some
             of my responsibilities include building applications to streamline
             engineering procedures while continuously updating/maintaing legacy
-            systems. I'm also fortunate to have the opportunity to develop tools
-            using the most up to date LLMs and AI tools that to improve
+            systems. I&#39;m also fortunate to have the opportunity to develop
+            tools using the most up to date LLMs and AI tools that to improve
             company-wide efficiency.
           </p>
         </div>
@@ -215,8 +216,8 @@ export default function Home() {
             className="w-full max-w-md h-auto"
           />
           <p className="text-xs text-gray-500 mt-2">
-            <span className="font-semibold">Disclaimer:</span> I don't own this
-            image, please don't sue.
+            <span className="font-semibold">Disclaimer:</span> I don&#39;t own
+            this image, please don&#39;t sue.
           </p>
         </div>
       </div>
