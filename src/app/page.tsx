@@ -75,6 +75,12 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          <Link
+            href="/blog"
+            className="inline-block brightness-85 hover:brightness-100 text-lg font-semibold transition underline"
+          >
+            View All
+          </Link>
         </div>
       </div>
       <div className="grid grid-cols-1  md:grid-cols-2 place-items-center my-8 mx-12 xl:mx-24 ">
@@ -198,6 +204,12 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          <Link
+            href="/projects"
+            className="inline-block brightness-85 hover:brightness-100 text-lg font-semibold transition underline"
+          >
+            View All
+          </Link>
         </div>
       </div>
       <div className="flex flex-col xl:flex-row justify-between items-center my-8 mx-12 xl:mx-24">
