@@ -81,9 +81,9 @@ export default function Home() {
           alt="Logo"
           width={300}
           height={300}
-          className={`rounded-full transition-opacity duration-300 mr-8 border-2 ${resolvedTheme === 'light' ? 'border-black' : 'border-white'}`}
+          className={`rounded-full transition-opacity duration-300 md:mr-8 border-2 ${resolvedTheme === 'light' ? 'border-black' : 'border-white'}`}
         />
-        <div className="ml-8">
+        <div className="md:ml-8 text-center md:text-left">
           <h3>Felix Tessier</h3>
           <p className="font-bold text-2xl my-2">
             Full Stack Software Developer
