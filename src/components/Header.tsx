@@ -34,7 +34,10 @@ const Header = () => {
         className={`h-24 flex items-center justify-between border-b-2 
         ${resolvedTheme === 'light' ? 'border-black' : 'border-white'}`}
       >
-        <div className="flex items-center gap-4">
+        <Link
+          href={'/'}
+          className="flex items-center gap-4 hover:opacity-50 transition-opacity duration-300"
+        >
           <Image
             src={
               resolvedTheme === 'dark'
@@ -47,7 +50,7 @@ const Header = () => {
             className="transition-opacity duration-300"
           />
           <p className={`text-xl font-mclaren`}>Felix Tessier</p>
-        </div>
+        </Link>
         <nav className=" hidden lg:block">
           <ul className="flex gap-24 font-bold text-xl">
             <li>
